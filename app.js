@@ -150,6 +150,16 @@ var financeController = (function() {
       }
     },
 
+    deleteItem: function(type, id) {
+      var ids = data.items[type].map((el) => {
+        return el.id;
+      });
+
+      var index = ds.indexOf(id);
+      if(index !== -1) 
+        data.items[type].split(index, 1);
+    },
+
     addItem: function(type, desc, val) {
       var item, id;
 

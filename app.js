@@ -144,7 +144,7 @@ var financeController = (function() {
       data.tusuv = data.totals.inc - data.totals.exp;
 
       // Орлого зарлагын хувийг тооцоолно.
-      if(data.totals.exp > 0) {
+      if(data.totals.exp > 0 && data.totals.inc > 0) {
         data.huvi = Math.round((data.totals.exp / data.totals.inc) * 100);
       }
     },
